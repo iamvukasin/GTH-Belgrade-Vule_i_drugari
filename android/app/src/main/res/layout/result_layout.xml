@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_small"
+    android:elevation="@dimen/cardview_default_elevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_small">
+
+        <ImageView
+            android:id="@+id/departing_airline_logo"
+            android:layout_width="@dimen/airline_logo_size"
+            android:layout_height="@dimen/airline_logo_size"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toTopOf="@id/separator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/departing_airline_name"
+            android:layout_width="@dimen/airline_name_max_width"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:maxWidth="@dimen/airline_name_max_width"
+            tools:text="Lufthansa"
+            app:layout_constraintBottom_toBottomOf="@+id/departing_airline_logo"
+            app:layout_constraintStart_toEndOf="@+id/departing_airline_logo"
+            app:layout_constraintTop_toTopOf="@+id/departing_airline_logo" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/departing_airline_name"
+            app:layout_constraintStart_toEndOf="@+id/departing_airline_name"
+            app:layout_constraintTop_toTopOf="@+id/departing_airline_name">
+
+            <TextView
+                android:id="@+id/departing_route"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="BEG -> MUC" />
+
+            <TextView
+                android:id="@+id/stops_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="2 stops" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end"
+            app:layout_constraintBottom_toBottomOf="@+id/departing_airline_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout8"
+            app:layout_constraintTop_toTopOf="@+id/departing_airline_logo">
+
+            <TextView
+                android:id="@+id/date_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="20/09/2019"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+            <TextView
+                android:id="@+id/duration_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="2h 30m"
+                style="@style/TextAppearance.MaterialComponents.Subtitle2" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_xsmall"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:layout_marginBottom="@dimen/spacing_small"
+            app:layout_constraintTop_toBottomOf="@id/departing_airline_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/returning_airline_logo"
+            android:src="@drawable/dotted_line"/>
+
+        <ImageView
+            android:id="@+id/returning_airline_logo"
+            android:layout_width="@dimen/airline_logo_size"
+            android:layout_height="@dimen/airline_logo_size"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toTopOf="@id/price_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/separator" />
+
+        <TextView
+            android:id="@+id/returning_airline_name"
+            android:layout_width="@dimen/airline_name_max_width"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:maxWidth="@dimen/airline_name_max_width"
+            tools:text="Lufthansa"
+            app:layout_constraintBottom_toBottomOf="@+id/returning_airline_logo"
+            app:layout_constraintStart_toEndOf="@+id/returning_airline_logo"
+            app:layout_constraintTop_toTopOf="@+id/returning_airline_logo" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/returning_airline_name"
+            app:layout_constraintStart_toEndOf="@+id/returning_airline_name"
+            app:layout_constraintTop_toTopOf="@+id/returning_airline_name">
+
+            <TextView
+                android:id="@+id/returning_route"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="MUC -> BEG" />
+
+            <TextView
+                android:id="@+id/stops_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="2 stops" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end"
+            app:layout_constraintBottom_toBottomOf="@+id/returning_airline_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout7"
+            app:layout_constraintTop_toTopOf="@+id/returning_airline_logo">
+
+            <TextView
+                android:id="@+id/date_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="26/10/2019"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+            <TextView
+                android:id="@+id/duration_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="2h 30m"
+                style="@style/TextAppearance.MaterialComponents.Subtitle2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/price_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:gravity="end"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/returning_airline_logo">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextAppearance.MaterialComponents.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/spacing_xsmall"
+                    android:text="@string/human_price" />
+
+                <TextView
+                    android:id="@+id/result_human_price"
+                    style="@style/TextAppearance.MaterialComponents.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="400 EUR" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/spacing_xsmall">
+
+                <TextView
+                    style="@style/TextAppearance.MaterialComponents.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/spacing_xsmall"
+                    android:text="@string/pet_price" />
+
+                <TextView
+                    android:id="@+id/result_pet_price"
+                    style="@style/TextAppearance.MaterialComponents.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="200 EUR" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/result_total_price"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="600 EUR" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

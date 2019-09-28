@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Petspensive</string>
+
+    <string name="from_date">From date</string>
+    <string name="to_date">To date</string>
+    <string name="from_destination">From</string>
+    <string name="to_destination">To</string>
+    <string name="adults_count">Adults</string>
+    <string name="children_count">Children</string>
+    <string name="pets_count">Pets</string>
+    <string name="search">Search</string>
+    <string name="pet_type">Type</string>
+    <string name="pet_breed">Breed</string>
+    <string name="pet_months">Age (months)</string>
+    <string name="pet_weight">Weight (kg)</string>
+    <string name="results_title">Results</string>
+    <string name="human_price">Price for passengers: </string>
+    <string name="pet_price">Price for pets:</string>
+
+    <string name="direct_flight">direct</string>
+    <plurals name="num_stops">
+        <item quantity="one">%d stop</item>
+        <item quantity="other">%d stops</item>
+    </plurals>
+</resources>
