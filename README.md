@@ -3,7 +3,9 @@ Project submission for the `Global Travel Hackathon in Belgrade, by Vule i druga
 
 **Our application gathers the data about flight expenses when traveling with pets for several airline companies and compares prices when traveling with a pet or without.**
 
-![Add a screenshot from your project. For example the main website page.](https://raw.githubusercontent.com/Global-Travel-Hackathon/GTH-Location-TeamName/master/screenshots/Global-Travel-Hackathon-image.png)
+| **Start screen** | **Input for pet information** | **Found flights** |
+:-------------------------:|:-------------------------:|:-------------------------:
+![](screenshots/0%20-%20StartScreen.png) | ![](screenshots/1%20-%20Pets.png) | ![](screenshots/2%20-%20Results.png) |
 
 ## :books: Description
 
