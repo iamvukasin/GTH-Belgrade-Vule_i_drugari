@@ -1,46 +1,71 @@
 # GTH-Location-TeamName
-Project submission for the `Global Travel Hackathon in [Location], by [team-name] team`.
+Project submission for the `Global Travel Hackathon in Belgrade, by Vule i drugari team`.
 
-**Write one sentence explaining what does your project.**
+**Our application gathers the data about flight expenses when traveling with pets for several airline companies and compares prices when traveling with a pet or without.**
 
 ![Add a screenshot from your project. For example the main website page.](https://raw.githubusercontent.com/Global-Travel-Hackathon/GTH-Location-TeamName/master/screenshots/Global-Travel-Hackathon-image.png)
 
 ## :books: Description
 
-Write a short abstract of the project. Don't forget to include:
+One of the defects of flight search services and APIs is that they do not provide the information about prices for bringing a pet on the flight. The demo of our applications gathers this data from several specific airlines and provides service of calculating the cumulative price for traveling with animals as well as comparing it to the price of travel without a pet. The app is created for the Android operating system.
 
-* Hackathon topic you used (Sustainability, Accessibility or Community);
-* The development tools used to build the project;
-* SDKs used in the project;
-* APIs used in the project;
-* Any assets used in the project;
-* Any libraries used in the project;
-* Any components not created at the hackathon;
+**Hackaton theme applied: Accessibility**
+
+This project was implemented with the idea to make the travel more accessible to people that travel with their pets.
+
+**Development tools used in the project**
+* Languages: Kotlin, Python
+* IDEs: AndroidStudio, PyCharm
+
+**SDKs used in the project**
+* Android SDK
+
+**APIs used in the project**
+* Tequila by Kiwi.com
+
+**Libraries used in the project**
+* AndroidX
+* Material components for Android
+* Python's Requests and flusk libraries 
 
 ## :hugs: Maintainers
 
 List all the team members. For example:
-* [Jona Azizaj - jonatoni](https://github.com/jonatoni)
-
+* [Aleksandar Cvetić](https://github.com/acac97)
+* [Vukašin Manojlović](https://github.com/iamvukasin)
+* [Sanja Mijović](https://github.com/sanjamijovic)
 
 ## :tada: Why is this so awesome?
 
-* List reasons why you think your project is awesome.
-* Two.
-* Etc.
+* It makes travel with pets more accessible.
+* It calculates the price for as many pets as the owner wants to bring with him.
+* It saves time and effort of contacting the airline to get the needed information or dealing with several different airline policies.
+* It is scalable and can be a great addition to any existing flight search service.
 
 ## :hammer_and_wrench: Installation
 
-Write a short description how can other people run your project.
+### Python server
+* Install following packages via pip: flusk, requests, datetime.
+* Navigate to server folder of this repo
+* Run server using following commands(assumes that you use UNIX type system):
+```
+$ export FLASK_APP=main.py
+$ flask run --host=0.0.0.0 --port=5001
+```
+### Petspensive (Android app)
+
+* Make sure that server and mobile phone you are going to run app on are on same network
+* Get ip address of server
+* In `android/app/src/main/java/io/github/iamvukasin/hacktravel/api/FlightService.kt` change variable `SERVER_ADDRESS` to server's IP address
+* Open android project in AndroidStudio
+* Build and deploy app
+* Success!
 
 ## :bulb: Devstack
 
-Please, explain what technologies you have used.
+* Python
+* Kotlin
+* Java
 
 ## :warning: Licence
-
-Any intellectual property developed during and within the scope of the hackathon must be open source and licensed under one of the licenses referenced in https://opensource.org/licenses. We will not have any rights and teams will be the author of their work.
-
-`Example:`
-
->The code in this project is licensed under MIT license. By contributing to this project, you agree that your contributions will be licensed under its MIT license.
+The code in this project is licensed under MIT license. By contributing to this project, you agree that your contributions will be licensed under its MIT license.
